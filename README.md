@@ -12,7 +12,7 @@ Paciência 'crescente'.
 
 Compilação
 ------------------------------------------
-Este arquivo pode ser compilado por um simples comando "make" na pasta principal do projeto (kac14). A saída do make será o binário "crescente" na pasta "bin". Alternativamente, a compilação do arquivo "crescente.c" no diretório "src" também gerara o binário desejado. O comando make também suporta o argumento "clean", removendo o executável presente na pasta bin.
+Este arquivo pode ser compilado por um simples comando "make" na pasta principal do projeto. A saída do make será o binário "crescente" na pasta "bin". Alternativamente, a compilação do arquivo "crescente.c" no diretório "src" também gerara o binário desejado. O comando make também suporta o argumento "clean", removendo o executável presente na pasta bin.
 
 Como jogar?
 ------------------------------------------
@@ -45,25 +45,25 @@ Algoritmos e estruturas
 -- Estruturas:
 Para representar cada carta, foi-se utilizado um struct com dois integers: Um para o valor da carta (um int entre 1 e 13) e outro para o naipe (0-3).
 
--- Função principal:
-A função 'main' consiste basicamente de:
-- Determinar o modo de jogo a ser jogado. Caso seja contra o relógio, determinar o tempo máximo.
-- Obter e guardar o tempo (em segundos) desde 1970 no momento antes do início da partida.
-- Chamar a função "jogar" para iniciar a partida.
-- Após o fim do jogo (fim de jogar()), calcular o tempo gasto na partida (em segundos).]
-- Imprimir uma mensagem de acordo com o fato do jogador ter vencido ou não a partida.
-- Chamar a função "isBestTime" para determinar se o tempo gasto é o melhor tempo da seção. Caso for, guardar esse tempo.
-- Voltar para o passo 1 até o usuário desejar sair do programa.
-- Antes de sair do programa, informar o melhor tempo da seção (caso haja um).
+- Função principal:
+ A função 'main' consiste basicamente de:
+ - Determinar o modo de jogo a ser jogado. Caso seja contra o relógio, determinar o tempo máximo.
+ - Obter e guardar o tempo (em segundos) desde 1970 no momento antes do início da partida.
+ - Chamar a função "jogar" para iniciar a partida.
+ - Após o fim do jogo (fim de jogar()), calcular o tempo gasto na partida (em segundos).]
+ - Imprimir uma mensagem de acordo com o fato do jogador ter vencido ou não a partida.
+ - Chamar a função "isBestTime" para determinar se o tempo gasto é o melhor tempo da seção. Caso for, guardar esse tempo.
+ - Voltar para o passo 1 até o usuário desejar sair do programa.
+ - Antes de sair do programa, informar o melhor tempo da seção (caso haja um).
 
--- Função jogar:
-No início de cada jogo (chamada da função "jogar"), são criados:
-* Uma matriz da struct "carta", 16 por NCARTAS (NCARTAS é o o numero total de cartas do baralho), representando cada um dos blocos perifericos.
-* Duas matrizes da struct "carta", 4 por NCARTAS cada uma, representando os 8 blocos centrais, separando-os em "decrescentes" e "crescentes".
-* Três matrizes do tipo int de 16, 4 e 4 posições respectivamente, representando a quantidade de cartas presentes nos blocos perifericos, crescentes e decrescentes.
-* Um inteiro "running", que é responsável por manter o loop até o jogo acabar ou o jogador desistir.
-* Um inteiro "reshuffles", responsável por guardar a quantidade de embaralhamentos que o jogador ainda possui.
-* Um inteiro "status", que é utilizado para determinar se o jogador venceu (define "WON") ou perdeu o jogo (define "LOST").
+- Função jogar:
+* No início de cada jogo (chamada da função "jogar"), são criados:
+  * Uma matriz da struct "carta", 16 por NCARTAS (NCARTAS é o o numero total de cartas do baralho), representando cada um dos blocos perifericos.
+  * Duas matrizes da struct "carta", 4 por NCARTAS cada uma, representando os 8 blocos centrais, separando-os em "decrescentes" e "crescentes".
+  * Três matrizes do tipo int de 16, 4 e 4 posições respectivamente, representando a quantidade de cartas presentes nos blocos perifericos, crescentes e decrescentes.
+  * Um inteiro "running", que é responsável por manter o loop até o jogo acabar ou o jogador desistir.
+  * Um inteiro "reshuffles", responsável por guardar a quantidade de embaralhamentos que o jogador ainda possui.
+  * Um inteiro "status", que é utilizado para determinar se o jogador venceu (define "WON") ou perdeu o jogo (define "LOST").
 
 Play consiste basicamente das seguintes ações:
 - Preenche um "baralho" com NCARTAS.
