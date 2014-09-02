@@ -1,32 +1,13 @@
-Paciência 'crescente'
-Desenvolvido por Kaio Augusto de Camargo (GRR20143061).
+Crescente
+============================================
+Paciência 'crescente'.
 
 Índice desse arquivo
 --------------------------------------------
--- Estrutura do Projeto
--- Compilação
--- Como jogar?
--- Algoritmos e estruturas
--- Bugs conhecidos
-
-Estrutura do pacote
---------------------------------------------
-kac14: Pasta principal do projeto
-|
-|- src: Pasta com os códigos fontes do projeto
-|  |
-|  |- crescente.c: Arquivo fonte principal.
-|  |
-|  |- crescente.h: Arquivo fonte contendo as definições, estruturas de dados e prototipos do projeto.
-|
-|- bin: Pasta onde os binários são gerados por padrão
-|  |
-|  |- crescente: Arquivo binário gerado pela compilação por make.
-|
-|
-|- makefile: Arquivo para compilação por make.
-|
-|- LEIAME: Este arquivo.
+- Compilação
+- Como jogar?
+- Algoritmos e estruturas
+- Bugs conhecidos
 
 
 Compilação
@@ -35,13 +16,6 @@ Este arquivo pode ser compilado por um simples comando "make" na pasta principal
 
 Como jogar?
 ------------------------------------------
-Antes de tudo, é necessário entender como cada bloco de cartas é identificado:
-
-      [P05] [P06] [P07] [P08] [P09] [P10] [P11] [P12]
-[P04]                                                 [P13]
-[P03]             [D01] [D02] [D03] [D04]             [P14]
-[P02]             [C01] [C02] [C03] [C04]             [P15]
-[P01]                                                 [P16]
 
 Temos 24 blocos em uma partida, dos quais:
 - 16 são blocos periféricos [P01 ~ P16]
